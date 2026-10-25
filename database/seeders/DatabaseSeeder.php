@@ -160,6 +160,8 @@ class DatabaseSeeder extends Seeder
             ['application_name' => 'User Manager', 'permission_name' => 'api_key_update'],
             ['application_name' => 'User Manager', 'permission_name' => 'api_key_delete'],
             ['application_name' => 'System Settings', 'permission_name' => 'scheduled_jobs_manage'],
+            ['application_name' => 'System Settings', 'permission_name' => 'homer_api_manage'],
+            ['application_name' => 'XML CDR', 'permission_name' => 'xml_cdr_pcap'],
             ['application_name' => 'Number Translations', 'permission_name' => 'number_translation_view'],
             ['application_name' => 'Number Translations', 'permission_name' => 'number_translation_add'],
             ['application_name' => 'Number Translations', 'permission_name' => 'number_translation_edit'],
@@ -244,6 +246,7 @@ class DatabaseSeeder extends Seeder
             ['application_name' => 'Basic Dialer', 'permission_name' => 'basic_dialer_start'],
             ['application_name' => 'PhoneControl', 'permission_name' => 'phone_control_view'],
             ['application_name' => 'PhoneControl', 'permission_name' => 'phone_control_call'],
+            ['application_name' => 'PhoneControl', 'permission_name' => 'phone_control_view_all_records'],
             ['application_name' => 'AI Agents', 'permission_name' => 'ai_agent_view'],
             ['application_name' => 'AI Agents', 'permission_name' => 'ai_agent_create'],
             ['application_name' => 'AI Agents', 'permission_name' => 'ai_agent_update'],
@@ -288,6 +291,8 @@ class DatabaseSeeder extends Seeder
     {
         $permissionsByGroup = [
             'superadmin' => [
+                'homer_api_manage',
+                'xml_cdr_pcap',
                 'messages_delete',
                 'scheduled_jobs_manage',
                 'number_translation_view',
@@ -420,6 +425,7 @@ class DatabaseSeeder extends Seeder
                 'basic_dialer_start',
                 'phone_control_view',
                 'phone_control_call',
+                'phone_control_view_all_records',
                 'ai_agent_view',
                 'ai_agent_create',
                 'ai_agent_update',
@@ -501,6 +507,7 @@ class DatabaseSeeder extends Seeder
                 'basic_dialer_start',
                 'phone_control_view',
                 'phone_control_call',
+                'phone_control_view_all_records',
                 'dynamic_route_view',
                 'dynamic_route_create',
                 'dynamic_route_update',
@@ -514,6 +521,8 @@ class DatabaseSeeder extends Seeder
                 'domain_select',
             ],
             'user' => [
+                'phone_control_view',
+                'phone_control_call',
                 'xml_cdr_view_self_records',
                 'call_block_view_self_records',
                 'wakeup_calls_view_self_records',
@@ -1462,6 +1471,22 @@ class DatabaseSeeder extends Seeder
                 'default_setting_value'         => '10',
                 'default_setting_enabled'       => true,
                 'default_setting_description'   => 'Number of predefined Park options in device and key template editors, starting at 5901. Use 1-99; missing or invalid values use 10.',
+            ],
+            [
+                'default_setting_category'      => 'provision',
+                'default_setting_subcategory'   => 'line_display_name_format',
+                'default_setting_name'          => 'text',
+                'default_setting_value'         => '{extension}',
+                'default_setting_enabled'       => true,
+                'default_setting_description'   => 'Display name for device lines whose Display Name is blank. Tokens: {extension}, {name}, {first_name}, {last_name}. Examples: {name}, {extension} {name}, {name} ({extension}). Falls back to the extension number when the name is empty. A typed Display Name always wins. Default: {extension}.',
+            ],
+            [
+                'default_setting_category'      => 'provision',
+                'default_setting_subcategory'   => 'blf_label_format',
+                'default_setting_name'          => 'text',
+                'default_setting_value'         => '{name}',
+                'default_setting_enabled'       => true,
+                'default_setting_description'   => 'Label for BLF and speed dial keys whose Label is blank and whose value is an extension. Tokens: {extension}, {name}, {first_name}, {last_name}. Examples: {name}, {extension} {name}, {name} ({extension}). Falls back to the extension number when the name is empty. A typed Label always wins. Default: {name}.',
             ],
             [
                 'default_setting_category'      => 'company',
