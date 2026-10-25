@@ -218,43 +218,43 @@ export default function Home(): ReactNode {
                                     >
 
                                         <div>
-                                            <img src="/img/screenshots/dashboard.png" alt="Dashboard screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/dashboard.png`} alt="Dashboard screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extensions.png" alt="Extensions screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extensions.png`} alt="Extensions screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extension-edit.png" alt="Extension Edit Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extension-edit.png`} alt="Extension Edit Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extension-forward.png" alt="Extension Forward Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extension-forward.png`} alt="Extension Forward Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extension-voicemail.png" alt="Extension Voicemail Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extension-voicemail.png`} alt="Extension Voicemail Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extension-device.png" alt="Extension Voicemail Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extension-device.png`} alt="Extension Voicemail Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/extension-mobile-app.png" alt="Extension Voicemail Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/extension-mobile-app.png`} alt="Extension Voicemail Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/ring-groups.png" alt="Ring Groups Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/ring-groups.png`} alt="Ring Groups Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/ring-group-edit.png" alt="Ring Group Edit Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/ring-group-edit.png`} alt="Ring Group Edit Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/ring-group-members.png" alt="Ring Group Members Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/ring-group-members.png`} alt="Ring Group Members Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/phone-numbers-edit.png" alt="Phone Numbers Edit Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/phone-numbers-edit.png`} alt="Phone Numbers Edit Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/business-hours-edit.png" alt="Business Hours Edit Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/business-hours-edit.png`} alt="Business Hours Edit Screenshot" />
                                         </div>
                                         <div>
-                                            <img src="/img/screenshots/contact-center.png" alt="Contact Center Dashboard Screenshot" />
+                                            <img src={`${siteConfig.baseUrl}img/screenshots/contact-center.png`} alt="Contact Center Dashboard Screenshot" />
                                         </div>
                                     </Carousel>
                                 </div>
@@ -346,7 +346,7 @@ export default function Home(): ReactNode {
                                     <div className="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                                         <img
                                             alt="Login Page"
-                                            src="/img/screenshots/login-page.png"
+                                            src={`${siteConfig.baseUrl}img/screenshots/login-page.png`}
                                             className="w-full rounded-xl shadow-xl ring-1 ring-black/5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                                         />
                                     </div>
@@ -384,7 +384,7 @@ export default function Home(): ReactNode {
                                     <div className="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                                         <img
                                             alt="Customer profile user interface"
-                                            src="/img/screenshots/domain-selector.png"
+                                            src={`${siteConfig.baseUrl}img/screenshots/domain-selector.png`}
                                             className="w-full rounded-xl shadow-xl ring-1 ring-black/5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                                         />
                                     </div>
